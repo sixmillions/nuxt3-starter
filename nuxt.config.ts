@@ -7,10 +7,7 @@ export default defineNuxtConfig({
     '@element-plus/nuxt',
     'dayjs-nuxt'
   ],
-  dayjs: {
-    locales: ['en', 'zh-cn'],
-    plugins: ['relativeTime', 'utc', 'timezone'],
-    defaultLocale: 'zh-cn',
-    defaultTimezone: 'Asia/Shanghai'
-  }
+  css: [
+    '~/assets/css/main.css'
+  ]
 })

@@ -138,3 +138,10 @@ export default defineNuxtConfig({
 
 <https://nuxt.com/docs/guide/directory-structure/server>
 
+## scss
+
+css扩展语言scss
+
+```bash
+pnpm add -D scss
+```
