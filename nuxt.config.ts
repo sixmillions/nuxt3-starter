@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   telemetry: false,
   modules: [
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@element-plus/nuxt'
   ]
 })
