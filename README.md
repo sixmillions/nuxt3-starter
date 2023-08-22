@@ -1,63 +1,68 @@
-# Nuxt 3 Minimal Starter
+# Nuxt3
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+## Init
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
+npx nuxi init nuxt3-starter
+cd nuxt3-starter
+pnpm i
 pnpm run dev
-
-# yarn
-yarn dev
 ```
-
-## Production
-
-Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
+git init 
+git branch -m main
+git config user.name sixmillions
+git config user.email liubw95@163.com
 ```
 
-Locally preview production build:
+## Modules
+
+### eslint
+
+<https://nuxt.com/modules/eslint>
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
+pnpm add -D eslint  @nuxtjs/eslint-module @nuxtjs/eslint-config-typescript
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+根目录新建 `.eslintrc.js`
+
+```js
+module.exports = {
+  extends: [
+    '@nuxtjs/eslint-config-typescript'
+  ],
+  rules: {
+    'no-console': 'off'
+  }
+}
+```
+
+`package.json` 新增script
+
+```json
+{
+  "lint": "eslint --ext .js,.ts,.vue ."
+}
+```
+
+校验 `pnpm lint` , 自动修复 `pnpm lint --fix`
+
+vscode保存时自动格式化，不需要prettier。先禁用prettier
+
+<https://nuxt.com/docs/community/contribution#ide-setup>
+
+<https://nuxt.com/docs/community/contribution#no-prettier>
+
+
+vscode 配置
+
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true
+  }
+}
+```
