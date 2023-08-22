@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   telemetry: false,
   modules: [
     '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
     '@element-plus/nuxt',
     'dayjs-nuxt'
   ],

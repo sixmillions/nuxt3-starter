@@ -134,6 +134,28 @@ export default defineNuxtConfig({
 })
 ```
 
+### tailwindcss
+
+<https://nuxt.com/modules/tailwindcss>
+
+<https://tailwindcss.nuxtjs.org/getting-started/setup>
+
+<https://tailwindcss.com/docs/installation>
+
+```bash
+pnpm add -D @nuxtjs/tailwindcss
+```
+
+config
+
+```ts
+{
+  modules: [
+    '@nuxtjs/tailwindcss'
+  ]
+}
+```
+
 ## api
 
 <https://nuxt.com/docs/guide/directory-structure/server>
