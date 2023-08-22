@@ -156,6 +156,43 @@ config
 }
 ```
 
+### color-mode
+
+<https://nuxt.com/modules/color-mode>
+
+<https://color-mode.nuxtjs.org/>
+
+```bash
+pnpm add -D @nuxtjs/color-mode
+```
+
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/color-mode']
+})
+```
+
+配合element
+
+<https://element-plus.org/zh-CN/guide/dark-mode.html>
+
+<https://github.com/element-plus/element-plus-nuxt-starter/blob/main/nuxt.config.ts>
+
+配置
+
+```ts
+{
+  elementPlus: {
+    // 相当于引入了 @import url('element-plus/theme-chalk/src/dark/var.scss');
+    themes: ['dark']
+  },
+  colorMode: {
+    // coloreMode默认类名是 'dark-mode' 这种；element是 'dark' 这种；为了有效果所以要去掉后缀
+    classSuffix: ''
+  }
+}
+```
+
 ## api
 
 <https://nuxt.com/docs/guide/directory-structure/server>

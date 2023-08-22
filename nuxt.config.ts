@@ -5,10 +5,17 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     '@element-plus/nuxt',
     'dayjs-nuxt'
   ],
   css: [
     '~/assets/css/main.css'
-  ]
+  ],
+  elementPlus: {
+    themes: ['dark']
+  },
+  colorMode: {
+    classSuffix: ''
+  }
 })
