@@ -4,6 +4,13 @@ export default defineNuxtConfig({
   telemetry: false,
   modules: [
     '@nuxtjs/eslint-module',
-    '@element-plus/nuxt'
-  ]
+    '@element-plus/nuxt',
+    'dayjs-nuxt'
+  ],
+  dayjs: {
+    locales: ['en', 'zh-cn'],
+    plugins: ['relativeTime', 'utc', 'timezone'],
+    defaultLocale: 'zh-cn',
+    defaultTimezone: 'Asia/Shanghai'
+  }
 })

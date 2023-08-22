@@ -102,6 +102,38 @@ export default defineNuxtConfig({
 })
 ```
 
+### Dayjs
+
+<https://nuxt.com/modules/dayjs>
+
+```bash
+pnpm add -D dayjs-nuxt
+```
+
+`nuxt.config.ts` 配置 modules
+
+```ts
+export default defineNuxtConfig({
+  modules: [
+    'dayjs-nuxt'
+  ]
+})
+```
+
+可以配置默认locale和时区
+
+```ts
+export default defineNuxtConfig({
+  modules: ['dayjs-nuxt'],
+  dayjs: {
+    locales: ['en', 'zh-cn'],
+    plugins: ['relativeTime', 'utc', 'timezone'],
+    defaultLocale: 'zh-cn',
+    defaultTimezone: 'Asia/Shanghai' // 只影响 dayjs().tz()
+  }
+})
+```
+
 ## api
 
 <https://nuxt.com/docs/guide/directory-structure/server>
