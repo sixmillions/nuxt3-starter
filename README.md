@@ -66,3 +66,8 @@ vscode 配置
   }
 }
 ```
+
+## api
+
+<https://nuxt.com/docs/guide/directory-structure/server>
+
